@@ -1,0 +1,26 @@
+.preloader-icon {
+  margin-right: 5px;
+  display: block;
+  position: relative;
+  svg {
+    height: 18px;
+    width: 18px;
+  }
+  &-small svg {
+    height: 12px;
+    width: 12px;
+  }
+  &-large svg {
+    height: 30px;
+    width: 30px;
+  }
+  svg {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

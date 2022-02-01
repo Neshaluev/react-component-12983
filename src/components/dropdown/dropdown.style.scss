@@ -1,0 +1,111 @@
+@import "../../style/variables/index";
+
+.dropdown {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid $color-gray;
+  align-items: center;
+  width: 100%;
+  &-open {
+    border-color: $color-liteBlue;
+  }
+}
+.dropdown-item {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  &-active {
+    color: black;
+    font-weight: bold;
+    background-color: $color-gray;
+  }
+  &:hover {
+    background-color: $color-gray;
+  }
+}
+
+.dropdown-menu {
+  box-sizing: content-box;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  overflow-y: auto;
+  left: -1px;
+  top: 100%;
+  z-index: 5;
+  display: none;
+  border: 1px solid $color-liteBlue;
+  border-top: none;
+  &-upward {
+    top: -248px;
+    border-top: 1px solid $color-liteBlue;
+    border-bottom: none;
+  }
+  &-multiple {
+    top: -200px;
+  }
+  &-visible {
+    display: block;
+  }
+}
+.dropdown-content {
+  display: flex;
+  margin-left: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  align-items: center;
+}
+.dropdown-search {
+  position: absolute;
+  z-index: 3;
+  background-color: transparent;
+
+  height: 40px;
+  white-space: nowrap;
+  margin-right: 5px;
+  outline: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+.divider {
+  white-space: nowrap;
+  height: 40px;
+  padding: 5px;
+  line-height: 26px;
+}
+
+.driver-text.filtred {
+  visibility: hidden;
+}
+.list-labels {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid $color-gray;
+  height: 28px;
+  white-space: nowrap;
+  padding: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  border-radius: 3px;
+  color: gray;
+  outline: none;
+  .dropdown-label-close {
+    cursor: pointer;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}
